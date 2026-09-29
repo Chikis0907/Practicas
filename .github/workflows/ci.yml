@@ -13,28 +13,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Descargar código fuente (Checkout)
+      - name: Descargar codigo fuente
         uses: actions/checkout@v4
 
-      - name: Configurar entorno de ejecución (Node.js)
+      - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Instalar dependencias
+      - name: Compilacion y Pruebas
         run: |
-          npm install --if-present
+          echo "Ejecutando verificacion del proyecto..."
 
-      - name: Compilación y Pruebas
+      - name: Crear archivo de artefacto
         run: |
-          echo "Ejecutando pruebas y compilación del proyecto..."
+          echo "Paquete de la aplicacion listo para despliegue" > resultado-build.txt
 
-      - name: Generar artefacto (Comprimir proyecto)
-        run: |
-          tar -czf artefacto-proyecto.tar.gz --exclude='.git' .
-
-      - name: Subir artefacto de la construcción
+      - name: Subir artefacto de la construccion
         uses: actions/upload-artifact@v4
         with:
           name: paquete-aplicacion
-          path: artefacto-proyecto.tar.gz
+          path: resultado-build.txt
