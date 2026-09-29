@@ -40,4 +40,4 @@ Ejecución Manual Microservicio Inventario: cd servicio-inventario && npm instal
 Evidencias y Estado del Proyecto
 Evidencias Solicitadas: Enlace al repositorio remoto, capturas de logs de ejecución, historial de commits por integrante y exportación del cronograma en Excel.
 
-Estado Actual: Fase 1 Finalizada (Repositorio creado, estructura de microservicios configurada, archivo .gitignore establecido y asignación de roles realizada). Próxima etapa: Desarrollo de APIs y Pipeline CI/CD.
+Estado Actual: Fase 1 Finalizada (Repositorio creado, estructura de microservicios configurada, archivo .gitignore establecido y asignación de roles realizada). Próxima etapa: Desarrollo de APIs y Pipeline CI/CD.## Pruebas de CI en Pull Request
