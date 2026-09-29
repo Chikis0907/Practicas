@@ -34,3 +34,8 @@ jobs:
         with:
           name: paquete-aplicacion
           path: resultado-build.txt
+      
+      - name: Compilacion y Pruebas
+        run: |
+          echo "Ejecutando verificacion del proyecto..."
+          exit 1
