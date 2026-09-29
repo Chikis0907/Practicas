@@ -33,12 +33,12 @@ jobs:
         run: |
           npm test --if-present
 
-      - name: Generar y empaquetar artefacto
+      - name: Generar artefacto (Comprimir proyecto)
         run: |
-          zip -r artefacto-proyecto.zip . -x "*.git*" "node_modules/*"
+          tar -czf artefacto-proyecto.tar.gz --exclude='.git' .
 
       - name: Subir artefacto de la construcción
         uses: actions/upload-artifact@v4
         with:
           name: paquete-aplicacion
-          path: artefacto-proyecto.zip
+          path: artefacto-proyecto.tar.gz
